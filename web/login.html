@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://t4.ftcdn.net/jpg/04/48/46/75/360_F_448467517_QXFZY8nA41dSbvaJzCIfItRzk0Wmv5n6.jpg');
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { filter: brightness(1); }
+            100% { filter: brightness(0.8); }
+        }
+
+        .container {
+            background-color: mintcream;
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #ccc;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+            animation: containerAnimation 1s ease-out;
+        }
+
+        @keyframes containerAnimation {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        input[type="email"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="email"]:hover, input[type="password"]:hover {
+            border-color: #888;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="email"]:focus, input[type="password"]:focus {
+            border-color: #555;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #003773;
+            color: whitesmoke;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #eb5757;
+            box-shadow: 0px 0px 5px #eb5757,
+                        0px 0px 30px #eb5757,
+                        0px 0px 90px #eb5757;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="login.php" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
